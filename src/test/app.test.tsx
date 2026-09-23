@@ -40,6 +40,21 @@ describe("tasks", () => {
     await user.click(within(status()).getByRole("button", { name: "Desfazer" }));
     expect(store.get().tasks.find((t) => t.id === "t2")!.status).toBe("doing");
   });
+  it("keeps a repeating task visible in its list after completing and undoing it", async () => {
+    const user = userEvent.setup();
+    const { store } = renderApp("/projects/p1");
+    await h1("Trabalho");
+    const row = () => screen.getByRole("button", { name: /^Responder os e-mails da manhã/ }).closest("li")!;
+    const dueBefore = store.get().tasks.find((t) => t.id === "t3")!.due;
+    await user.click(screen.getByRole("checkbox", { name: "Concluir “Responder os e-mails da manhã”" }));
+    await waitFor(() => expect(store.get().tasks.find((t) => t.id === "t3")!.due).not.toBe(dueBefore));
+    await waitFor(() => expect(row()).not.toHaveAttribute("data-leaving"));
+    expect(within(row()).getByRole("checkbox")).not.toBeChecked();
+    await user.click(within(status()).getByRole("button", { name: "Desfazer" }));
+    expect(store.get().tasks.find((t) => t.id === "t3")!.due).toBe(dueBefore);
+    await waitFor(() => expect(row()).not.toHaveAttribute("data-leaving"));
+  });
+
   it("moves through a list with the arrows and completes with X", async () => {
     const user = userEvent.setup();
     const { store } = renderApp("/today");

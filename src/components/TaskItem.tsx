@@ -1,5 +1,5 @@
 import { IconCheck, useToast } from "@kaykesiquara/prumo";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router";
 import { reducedMotion } from "../app/composer";
 import { useApp, useSelect, useToday } from "../app/context";
@@ -28,6 +28,7 @@ export function TaskItem({ task, showProject = true }: { task: Task; showProject
   const project = useSelect((s) => s.projects.find((p) => p.id === task.projectId));
   const toggle = useToggleTask();
   const [leaving, setLeaving] = useState(false);
+  useEffect(() => setLeaving(false), [task.status, task.due]);
   const done = task.status === "done";
   const onCheck = () => {
     if (done || reducedMotion()) { toggle(task); return; }

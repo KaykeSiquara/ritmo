@@ -1,6 +1,6 @@
 # Ritmo
 
-Tasks, focus and habits in one calm, keyboard-first app. Type a task the way you think it, and Ritmo understands the date, the time, the project, the priority and the repeat. Built with React 19 and TypeScript on [Prumo](https://github.com/KaykeSiquara/prumo), my design system, and available in English and Portuguese.
+Tasks, focus and habits in one phone-first app that keeps the day moving. Type a task the way you think it, and Ritmo understands the date, the time, the project, the priority and the repeat. Built with React 19 and TypeScript on [Prumo](https://github.com/KaykeSiquara/prumo), my design system, and available in English and Portuguese.
 
 [Leia em português](README.pt-BR.md) · [Live demo](https://kayke-siquara-ritmo.vercel.app)
 

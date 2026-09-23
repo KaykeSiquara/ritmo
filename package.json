@@ -1,7 +1,7 @@
 {
   "name": "ritmo",
   "version": "1.0.0",
-  "description": "Ritmo: tasks, focus and habits in one calm, keyboard-first app. Built with React 19, TypeScript and the Prumo design system.",
+  "description": "Ritmo: a phone-first productivity app for tasks, focus and habits, with natural-language quick add. Built with React 19, TypeScript and the Prumo design system.",
   "private": true,
   "type": "module",
   "license": "MIT",

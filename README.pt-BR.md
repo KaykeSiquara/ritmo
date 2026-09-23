@@ -1,6 +1,6 @@
 # Ritmo
 
-Tarefas, foco e hábitos num app calmo, feito para o teclado. Escreva a tarefa do jeito que você pensa, e o Ritmo entende a data, o horário, o projeto, a prioridade e a repetição. Feito com React 19 e TypeScript sobre o [Prumo](https://github.com/KaykeSiquara/prumo), o meu design system, em português e inglês.
+Tarefas, foco e hábitos num app pensado para o celular, que mantém o dia em movimento. Escreva a tarefa do jeito que você pensa, e o Ritmo entende a data, o horário, o projeto, a prioridade e a repetição. Feito com React 19 e TypeScript sobre o [Prumo](https://github.com/KaykeSiquara/prumo), o meu design system, em português e inglês.
 
 [Read in English](README.md) · [Demonstração](https://kayke-siquara-ritmo.vercel.app)
 
