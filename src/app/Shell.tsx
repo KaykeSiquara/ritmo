@@ -131,6 +131,16 @@ function TabBar({ onMenu }: { onMenu: () => void }) {
 const GO: Record<string, string> = { t: "/today", u: "/upcoming", i: "/inbox", f: "/focus", h: "/habits", r: "/insights", s: "/settings" };
 const typing = (el: Element | null) => !!el && (el.matches("input, textarea, select, [contenteditable=true]") || !!el.closest("[role=dialog]"));
 
+function Credits() {
+  const { t, lang } = useI18n();
+  return (
+    <p className="credits">
+      {t("madeBy")} <a href={lang === "pt" ? "https://kayke-siquara.vercel.app" : "https://kayke-siquara-en.vercel.app"}>Kayke Siquara</a>
+      <br /><a href="https://github.com/KaykeSiquara/ritmo">{t("sourceCode")}</a>
+    </p>
+  );
+}
+
 export function Shell() {
   const { t, lang } = useI18n();
   const store = useApp();
@@ -197,9 +207,11 @@ export function Shell() {
         <p className="brand"><span className="brand__mark" aria-hidden="true" />Ritmo</p>
         <Nav onNewProject={() => setNewProject(true)} />
         <p className="sidebar__note">{t("demoNote")}</p>
+        <Credits />
       </aside>
       <Sheet title="Ritmo" description={t("appTagline")} side="left" open={navOpen} onOpenChange={setNavOpen} closeLabel={t("closeNav")}>
         <Nav onNavigate={() => setNavOpen(false)} onNewProject={() => { setNavOpen(false); setNewProject(true); }} />
+        <Credits />
       </Sheet>
       <div className="content">
         <header className="topbar">
