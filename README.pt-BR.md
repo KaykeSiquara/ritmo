@@ -69,16 +69,16 @@ Na primeira visita, os dados de exemplo aparecem no idioma do navegador. Tudo fi
 
 ## Testes
 
-170 testes com Vitest e Testing Library:
+171 testes com Vitest e Testing Library:
 
 - domínio: 57, para datas, o leitor da adição rápida nos dois idiomas, repetição, sequências de hábitos e o cronômetro;
 - estado: 17, para o reducer, o desfazer, a gravação e leitura, a validação da importação, os seletores e a tradução dos dados de exemplo;
 - tema: 64, o contraste de cada par documentado nos dois temas;
-- interface: 32, cobrindo adição rápida, concluir e desfazer, navegação pelo teclado, o painel da tarefa, mover cartões, o cronômetro, hábitos, a paleta de comandos, os atalhos, a troca de idioma e a importação, além do axe em todas as telas nos dois idiomas.
+- interface: 33, cobrindo adição rápida, concluir e desfazer, navegação pelo teclado, o painel da tarefa, mover cartões, o cronômetro, hábitos, a paleta de comandos, os atalhos, a troca de idioma e a importação, além do axe em todas as telas nos dois idiomas.
 
 Trocar o idioma também traduz as tarefas, os projetos e os hábitos de exemplo, mas nunca o que você escreveu ou editou.
 
-O CI roda a checagem de tipos, os testes e o build em Node 20 e 22.
+O CI roda a checagem de tipos, os testes e o build em Node 22 e 24.
 
 ## Estrutura
 

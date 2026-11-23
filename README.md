@@ -69,16 +69,16 @@ The first visit loads demo data in the browser's language. Everything stays in y
 
 ## Tests
 
-170 tests with Vitest and Testing Library:
+171 tests with Vitest and Testing Library:
 
 - domain: 57, for dates, the quick add parser in both languages, repeats, habit streaks and the timer;
 - state: 17, for the reducer, undo, saving and loading, import validation, the selectors and translating the demo data;
 - theme: 64, the contrast of every documented pair in both themes;
-- interface: 32, covering quick add, completing and undoing, keyboard navigation, the task sheet, moving cards, the timer, habits, the command palette, the shortcuts, the language switch and imports, plus axe on every view in both languages.
+- interface: 33, covering quick add, completing and undoing, keyboard navigation, the task sheet, moving cards, the timer, habits, the command palette, the shortcuts, the language switch and imports, plus axe on every view in both languages.
 
 Switching the language also translates the demo tasks, projects and habits, but never anything you wrote or edited.
 
-CI runs the type check, the tests and the build on Node 20 and 22.
+CI runs the type check, the tests and the build on Node 22 and 24.
 
 ## Structure
 
